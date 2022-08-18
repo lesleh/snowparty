@@ -18,7 +18,7 @@ const FALLBACK_SERVICE_CHANNEL_ID = "simplybusiness";
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      {/* <Script
+      <Script
         id="partytown-config"
         data-partytown-config
         dangerouslySetInnerHTML={{
@@ -30,10 +30,10 @@ function MyApp({ Component, pageProps }) {
               };
             `,
         }}
-      /> */}
+      />
       <Script
         id="snowplow-init"
-        //strategy="worker"
+        strategy="worker"
         dangerouslySetInnerHTML={{
           __html: `
             (function(p, l, o, w, i, n, g) {
@@ -62,7 +62,7 @@ function MyApp({ Component, pageProps }) {
       />
       <Script
         id="snowplow-config"
-        //strategy="worker"
+        strategy="worker"
         dangerouslySetInnerHTML={{
           __html: `
             window.snowplow("newTracker", "${PV_VALANCHE_TRACKER_NAME}", "${COLLECTOR_URL}", {
